@@ -56,11 +56,11 @@ void Nonogram::exportSelf(){
     file.open(QIODevice::WriteOnly);
      QTextStream data(&file);
 
-     data << gridSize << endl;
+     data << gridSize << Qt::endl;
      for(auto gridLoc : this->grid){
         data << gridLoc << " ";
      }
-     endl(data);
+     Qt::endl(data);
      file.close();
      qDebug() << "the file has been saved" + dir;
 }
