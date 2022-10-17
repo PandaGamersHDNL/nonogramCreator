@@ -49,6 +49,6 @@ RUN cd mxe && sudo make qtbase MXE_TARGETS="x86_64-w64-mingw32.static" MXE_USE_C
 
 # path to mxe
 ENV PATH /mxe/usr/bin:$PATH
-
+RUN export PATH=/mnt/c/Users/panda/Documents/nonogramCreator/mxe/usr/bin:$PATH
 RUN /mxe/usr/x86_64-w64-mingw32.static/qt5/bin/qmake
 RUN make
