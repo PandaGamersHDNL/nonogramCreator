@@ -18,6 +18,7 @@
       - [step 6](#step-6)
       - [step 7](#step-7)
       - [step 8](#step-8)
+    - [conclusion](#conclusion)
 
 ## Project
 
@@ -115,3 +116,5 @@ Now we have to run make to actually compile everything. so run `make` in the pro
 #### step 8
 go to the project folder open the release folder and there should be a nonogram.exe. this is the application
 
+### conclusion
+The compiling of the project was successful. The setup even though not having the whole qt packages just the base it still takes quite a long time to build. After the initial building of the qt-base package the compiling is very quick and repeatable.
