@@ -1,9 +1,18 @@
+#include <QtGlobal>
 #include "nonogram.h"
 #include "QPainter"
 #include "QDebug"
 #include "QColor"
 #include "QMouseEvent"
 #include <QFileDialog>
+
+#include <QtGlobal>
+
+#if QT_VERSION >= QT_VERSION_CHECK(5,14,0)
+#define ENDL Qt::endl
+#else
+#define ENDL endl
+#endif
 
 Nonogram::Nonogram(QWidget *parent, int gridSize) : QWidget(parent)
 {
@@ -56,11 +65,11 @@ void Nonogram::exportSelf(){
     file.open(QIODevice::WriteOnly);
      QTextStream data(&file);
 
-     data << gridSize << Qt::endl;
+     data << gridSize << ENDL;
      for(auto gridLoc : this->grid){
         data << gridLoc << " ";
      }
-     Qt::endl(data);
+    data << ENDL;
      file.close();
      qDebug() << "the file has been saved" + dir;
 }
